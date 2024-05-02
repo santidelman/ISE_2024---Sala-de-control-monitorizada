@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ISE 2024</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        table {
+            border: 1px solid #000080;
+            width: 100%;
+            height: 100%;
+        }
+
+        #header {
+            height: 15%; 
+            border-bottom: 1px solid #000080;
+            display: flex; /* Flexbox para el header */
+            align-items: center; /* Centrado vertical */
+            justify-content: space-between; /* Centrado horizontal */
+        }
+
+        #header h2 {
+            margin: 0;
+            flex-grow: 1; /* Hace que el título ocupe el espacio disponible */
+            text-align: center;
+        }
+
+        #logo {
+            flex-shrink: 0; /* Previene que el logo se redimensione */
+        }
+
+        .button-container {
+            display: flex; /* Flexbox para los botones */
+            flex-wrap: wrap; /* Permite la envoltura de elementos */
+            height: 85%; /* Altura ajustada del contenedor de botones */
+        }
+
+        .button-container a {
+            flex: 1 1 25%; /* Crecimiento, encogimiento y base del 25% */
+            display: flex; /* Flexbox para centrar el botón */
+            justify-content: center; /* Centrado horizontal del botón */
+        }
+
+        .button-container a button {
+            width: 80%; /* Ancho reducido del botón */
+            height: 50%; /* Altura reducida del botón */ds
+            margin: 10px; /* Espacio alrededor del botón */
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr id="header" bgcolor=#EEEEEE>
+                <h2>
+					<a id="logo" href="https://www.etsist.upm.es/"><img border="0" src="logoUPM.gif" width="100" height="100"></a>
+				</h2>
+				<h2>
+					<font face="verdana" color="#006699">Sala de control monitorizada</font>
+				</h2>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="button-container">
+                        <a href="/measuresTest.html"><button>Test de medidas</button></a>
+                        <a href="/controlAccess.html"><button>Control de acceso</button></a>
+                        <a href="/measuresData.html"><button>Registro de medidas</button></a>
+                        <a href="/config.html"><button>Configuración</button></a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
