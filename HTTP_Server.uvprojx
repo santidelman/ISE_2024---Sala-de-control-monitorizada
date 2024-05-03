@@ -409,11 +409,6 @@
           <GroupName>Web files</GroupName>
           <Files>
             <File>
-              <FileName>index.htm</FileName>
-              <FileType>9</FileType>
-              <FilePath>.\Web\index.htm</FilePath>
-            </File>
-            <File>
               <FileName>pg_header.inc</FileName>
               <FileType>9</FileType>
               <FilePath>.\Web\pg_header.inc</FilePath>
@@ -494,11 +489,6 @@
               <FilePath>.\Web\logo.gif</FilePath>
             </File>
             <File>
-              <FileName>llblue.jpg</FileName>
-              <FileType>9</FileType>
-              <FilePath>.\Web\llblue.jpg</FilePath>
-            </File>
-            <File>
               <FileName>pabb.gif</FileName>
               <FileType>9</FileType>
               <FilePath>.\Web\pabb.gif</FilePath>
@@ -514,24 +504,99 @@
               <FilePath>.\Web\logoUPM.gif</FilePath>
             </File>
             <File>
-              <FileName>measuresTest.html</FileName>
+              <FileName>index.htm</FileName>
               <FileType>9</FileType>
-              <FilePath>.\Web\measuresTest.html</FilePath>
+              <FilePath>.\Web\index.htm</FilePath>
             </File>
             <File>
-              <FileName>config.html</FileName>
+              <FileName>logo_keysecure.png</FileName>
               <FileType>9</FileType>
-              <FilePath>.\Web\config.html</FilePath>
+              <FilePath>.\Web\logo_keysecure.png</FilePath>
             </File>
             <File>
-              <FileName>controlAccess.html</FileName>
+              <FileName>network.png</FileName>
               <FileType>9</FileType>
-              <FilePath>.\Web\controlAccess.html</FilePath>
+              <FilePath>.\Web\network.png</FilePath>
             </File>
             <File>
-              <FileName>measuresData.html</FileName>
+              <FileName>config.png</FileName>
               <FileType>9</FileType>
-              <FilePath>.\Web\measuresData.html</FilePath>
+              <FilePath>.\Web\config.png</FilePath>
+            </File>
+            <File>
+              <FileName>controlAccess.png</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Web\controlAccess.png</FilePath>
+            </File>
+            <File>
+              <FileName>measureTest.png</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Web\measureTest.png</FilePath>
+            </File>
+            <File>
+              <FileName>measureData.png</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Web\measureData.png</FilePath>
+            </File>
+            <File>
+              <FileName>fondo.png</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Web\fondo.png</FilePath>
+            </File>
+            <File>
+              <FileName>config.cgi</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Web\config.cgi</FilePath>
+            </File>
+            <File>
+              <FileName>controlAccess.cgi</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Web\controlAccess.cgi</FilePath>
+            </File>
+            <File>
+              <FileName>measuresData.cgi</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Web\measuresData.cgi</FilePath>
+            </File>
+            <File>
+              <FileName>measuresTest.cgi</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Web\measuresTest.cgi</FilePath>
+            </File>
+            <File>
+              <FileName>llblue.jpg</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Web\llblue.jpg</FilePath>
+            </File>
+            <File>
+              <FileName>atras.png</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Web\atras.png</FilePath>
+            </File>
+            <File>
+              <FileName>co2.png</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Web\co2.png</FilePath>
+            </File>
+            <File>
+              <FileName>temp.png</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Web\temp.png</FilePath>
+            </File>
+            <File>
+              <FileName>humedad.png</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Web\humedad.png</FilePath>
+            </File>
+            <File>
+              <FileName>programador.png</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Web\programador.png</FilePath>
+            </File>
+            <File>
+              <FileName>uid.png</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Web\uid.png</FilePath>
             </File>
           </Files>
         </Group>

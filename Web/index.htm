@@ -1,82 +1,90 @@
-<!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="utf-8">
+		<title>CONTROL DE ACCESO</title>
+		<style>
+			body { 
+				margin-top: 10; 
+				background-color: rgb(255, 255, 255);
+			}
+			p {
+				font-size: 10;
+				font-family: Verdana;
+				color: #000000;
+			}
+			table {
+				align-content: center;
+				font-family: Verdana;
+				margin: auto;
+			}
+			th, tr {  
+				width: 200;
+			}
+			img { width: 100; height: 100; }
+			.block1{
+				width: 900;
+    			height: 200;
+				background-color: rgb(230, 230, 230)
+			}
+			.s1_block1 {
+				width: 200;
+    			height: 200;
+				float: left;
+			}
+			.s2_block1 {
+				width: 600;
+    			height: 200;
+				float: right;
+			}
+			.block2{
+				width: 900;
+				background-image: url(fondo.png);
+			}
+		</style>
+	</head>
 
-<head>
-    <title>ISE 2024</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
-
-        table {
-            border: 1px solid #000080;
-            width: 100%;
-            height: 100%;
-        }
-
-        #header {
-            height: 15%; 
-            border-bottom: 1px solid #000080;
-            display: flex; /* Flexbox para el header */
-            align-items: center; /* Centrado vertical */
-            justify-content: space-between; /* Centrado horizontal */
-        }
-
-        #header h2 {
-            margin: 0;
-            flex-grow: 1; /* Hace que el título ocupe el espacio disponible */
-            text-align: center;
-        }
-
-        #logo {
-            flex-shrink: 0; /* Previene que el logo se redimensione */
-        }
-
-        .button-container {
-            display: flex; /* Flexbox para los botones */
-            flex-wrap: wrap; /* Permite la envoltura de elementos */
-            height: 85%; /* Altura ajustada del contenedor de botones */
-        }
-
-        .button-container a {
-            flex: 1 1 25%; /* Crecimiento, encogimiento y base del 25% */
-            display: flex; /* Flexbox para centrar el botón */
-            justify-content: center; /* Centrado horizontal del botón */
-        }
-
-        .button-container a button {
-            width: 80%; /* Ancho reducido del botón */
-            height: 50%; /* Altura reducida del botón */ds
-            margin: 10px; /* Espacio alrededor del botón */
-        }
-    </style>
-</head>
-
-<body>
-    <table>
-        <tbody>
-            <tr id="header" bgcolor=#EEEEEE>
-                <h2>
-					<a id="logo" href="https://www.etsist.upm.es/"><img border="0" src="logoUPM.gif" width="100" height="100"></a>
-				</h2>
-				<h2>
-					<font face="verdana" color="#006699">Sala de control monitorizada</font>
-				</h2>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <div class="button-container">
-                        <a href="/measuresTest.html"><button>Test de medidas</button></a>
-                        <a href="/controlAccess.html"><button>Control de acceso</button></a>
-                        <a href="/measuresData.html"><button>Registro de medidas</button></a>
-                        <a href="/config.html"><button>Configuración</button></a>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</body>
-
+	<body><center>
+		<table border="1">
+			<tr><th>
+				<div class="block1" >
+					<img class="s1_block1" src="logo_keysecure.png">
+					<img class="s2_block1" src="">
+				</div>
+			</th></tr>
+			<tr><th>
+				<div class="block2">
+					<div style="height: 25;"></div>
+					<p style="font-size: 30;"><b>MENÃš PRINCIPAL</b></p>
+					<table>
+						<tr>
+							<th>Test Ambiental</th>
+							<th>Hitorial Ambiental</th>
+							<th>Historial de Accesos</th>
+							<th>ConfiguraciÃ³n de Accesos</th>
+						</tr>
+						<tr>
+							<th><a href="measuresTest.cgi"><img src="measureTest.png"></a></th>
+							<th><a href="measuresData.cgi"><img src="measureData.png"></a></th>
+							<th><a href="controlAccess.cgi"><img src="controlAccess.png"></a></th>
+							<th><a href="config.cgi"><img src="config.png"></a></th>
+						</tr>
+					</table>
+					<div style="height: 50;"></div>
+					<table>
+						<tr>
+							<th><a href="network.cgi">Red</a></th>
+							<th><a href="language.cgi">Idioma</a></th>
+							<th><a href="system.cgi">Sistema</a></th>
+						</tr>
+					</table>
+					<div style="height: 25;"></div>
+				</div>
+			</th></tr>
+			<tr><th>
+				<div style="background-color: rgb(230, 230, 230)">
+					<p>ISE Curso 2023/2024 <a href="https://www.etsist.upm.es/">ETSIST - UPM </a></p>
+				</div>
+			</th></tr>
+		</table>
+	</center></body>
 </html>
