@@ -33,6 +33,9 @@ extern osThreadId_t tid_ThreadPulsacion;
 
 extern char showtime[20];
 extern char showdate[20];
+extern char UID[20];
+extern char time_in[20];
+extern char time_out[20];
 
 // Local variable.
 static uint8_t P2;
@@ -363,13 +366,38 @@ uint32_t netCGI_Script (const char *env, char *buf, uint32_t buflen, uint32_t *p
       len = (uint32_t)sprintf (buf, &env[1], adv);
       break;
 
+    case 'w':
+      // 'rfid.cgi'
+      switch(env[2]){
+				case '1':
+					len = (uint32_t)sprintf (buf, &env[4], UID);
+					break;
+//				case '2':
+//					len = (uint32_t)sprintf (buf, &env[4], showdate);
+//					break;
+				case '3':
+					len = (uint32_t)sprintf (buf, &env[4], showtime);
+					break;
+//				case '4':
+//					len = (uint32_t)sprintf (buf, &env[4], showtime);
+//					break;
+			}
     case 'y':
-      // Button state from 'button.cgx'
-//      len = (uint32_t)sprintf (buf, "<checkbox><id>button%c</id><on>%s</on></checkbox>",
-//                               env[1], (get_button () & (1 << (env[1]-'0'))) ? "true" : "false");
-		
+      // 'rfid.cgx'
+				case '1':
+					len = (uint32_t)sprintf (buf, &env[4], UID);
+					break;
+//				case '2':
+//					len = (uint32_t)sprintf (buf, &env[4], showdate);
+//					break;
+				case '3':
+					len = (uint32_t)sprintf (buf, &env[4], showtime);
+					break;
+//				case '4':
+//					len = (uint32_t)sprintf (buf, &env[4], showtime);
+//					break;
 		case 'z':
-      // Button state from 'rtc.cgx'
+      // 'rtc.cgi'
       switch(env[2]){
 				case '1':
 					len = (uint32_t)sprintf (buf, &env[4], showtime);

@@ -8,7 +8,7 @@
 ".\debug\adc.o"
 ".\debug\leds_1.o"
 ".\debug\button.o"
-".\debug\rtc_1.o"
+".\debug\rtc_2.o"
 ".\debug\rc522.o"
 ".\debug\spi.o"
 ".\debug\gpio.o"

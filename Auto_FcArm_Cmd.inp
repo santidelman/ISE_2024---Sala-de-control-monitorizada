@@ -35,5 +35,7 @@ co2.png,
 temp.png,
 humedad.png,
 programador.png,
-uid.png 
+uid.png,
+rtc.cgx,
+controlAccess.cgx 
 TO Web.c RTE NOPRINT ROOT(Web)

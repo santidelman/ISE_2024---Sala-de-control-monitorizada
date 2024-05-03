@@ -1,0 +1,10 @@
+t <form>
+t <text>
+#t <id>ad_value</id>
+#c z<value>%s</value>
+t <id>ad_uid</id>
+c y 1<value>%s</value>
+c y 3<value>%s</value>
+t </text>
+t </form>
+.

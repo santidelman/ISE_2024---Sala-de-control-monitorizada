@@ -5,11 +5,19 @@
  *      Author: alcid
  */
 
-
 #include "RC522.h"
+
+#define MAX_TAGS 10
 
 uint8_t CardUID[5];  // almacena el buffer del codigo de rfid
 
+char UID[20];
+char UIDs[MAX_TAGS][20];  
+char times_in[MAX_TAGS][20]; 
+char times_out[MAX_TAGS][20];
+	
+extern char showtime[20];
+	
 // SPI init
 extern ARM_DRIVER_SPI Driver_SPI3;
 static ARM_DRIVER_SPI* SPI3drv = &Driver_SPI3;
@@ -71,8 +79,7 @@ int Init_Thread_RC522 (void)
  */
 static __NO_RETURN void Thread_RC522 (void *arg) {
 		(void)arg;
-		char buffer[20];
-	
+		int tag_count = 0;
 		RC522_Initialize();
 	
 		while(1) {
@@ -80,9 +87,26 @@ static __NO_RETURN void Thread_RC522 (void *arg) {
 			if(TM_MFRC522_Check(CardUID) == MI_OK){
 				osThreadFlagsSet(tid_ThreadPWM, senalPWM);
 				LCD_clean();
-				sprintf(buffer, "%02X %02X %02X %02X %02X", CardUID[0], CardUID[1], CardUID[2], CardUID[3], CardUID[4]);
-				LCD_WriteSentence(buffer,1);
+				sprintf(UID, "%02X %02X %02X %02X %02X", CardUID[0], CardUID[1], CardUID[2], CardUID[3], CardUID[4]);
+				LCD_WriteSentence(UID,1);
 				
+				bool found = false;
+				for (int i = 0; i < tag_count; i++) {
+						if (strcmp(UIDs[i], UID) == 0) {
+								strcpy(times_out[i], showtime);  // Actualizar solo time_out
+								found = true;
+								break;
+						}
+				}
+
+				if (!found) {
+						if (tag_count < MAX_TAGS) {
+								strcpy(UIDs[tag_count], UID);
+								strcpy(times_in[tag_count], showtime);
+								strcpy(times_out[tag_count], "");  // Inicializar time_out vacío
+								tag_count++;
+						}
+				}
 			} else {	// MI_ERR
 				printf("Error\n");
 			}

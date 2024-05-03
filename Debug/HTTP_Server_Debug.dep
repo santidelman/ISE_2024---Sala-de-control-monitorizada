@@ -1,6 +1,6 @@
 Dependencies for Project 'HTTP_Server', Target 'Debug': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (.\HTTP_Server_CGI.c)(0x6633C1E4)(--c99 -c --cpu Cortex-M4 -D__RTX -D__MICROLIB -g -O0 --apcs=interwork -I.\RTE\CMSIS-I.\RTE\Compiler-I.\RTE\Device\STM32F429ZITx-I.\RTE\Network-I.\RTE\_Debug-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Driver\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.3\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\debug\http_server_cgi.o --depend .\debug\http_server_cgi.d)
+F (.\HTTP_Server_CGI.c)(0x66354F28)(--c99 -c --cpu Cortex-M4 -D__RTX -D__MICROLIB -g -O0 --apcs=interwork -I.\RTE\CMSIS-I.\RTE\Compiler-I.\RTE\Device\STM32F429ZITx-I.\RTE\Network-I.\RTE\_Debug-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Driver\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.3\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\debug\http_server_cgi.o --depend .\debug\http_server_cgi.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E9F32)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E9F32)
 I (C:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x60D44B52)
@@ -50,7 +50,7 @@ I (.\RTE\Device\STM32F429ZITx\RTE_Device.h)(0x6633B75A)
 I (C:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Driver\Include\Driver_SPI.h)(0x60D44B52)
 I (C:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Driver\Include\Driver_Common.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\time.h)(0x5E8E9F32)
-F (.\HTTP_Server.c)(0x6634D244)(--c99 -c --cpu Cortex-M4 -D__RTX -D__MICROLIB -g -O0 --apcs=interwork -I.\RTE\CMSIS-I.\RTE\Compiler-I.\RTE\Device\STM32F429ZITx-I.\RTE\Network-I.\RTE\_Debug-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Driver\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.3\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\debug\http_server.o --depend .\debug\http_server.d)
+F (.\HTTP_Server.c)(0x6634D2BE)(--c99 -c --cpu Cortex-M4 -D__RTX -D__MICROLIB -g -O0 --apcs=interwork -I.\RTE\CMSIS-I.\RTE\Compiler-I.\RTE\Device\STM32F429ZITx-I.\RTE\Network-I.\RTE\_Debug-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Driver\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.3\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\debug\http_server.o --depend .\debug\http_server.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E9F32)
 I (main.h)(0x6633B754)
 I (C:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x5F6B34E6)
@@ -105,7 +105,7 @@ I (RTC.h)(0x6633B754)
 I (C:\Keil_v5\ARM\ARMCC\include\time.h)(0x5E8E9F32)
 I (SNTP.h)(0x6633B754)
 I (BUTTON.h)(0x6633B754)
-I (RC522.h)(0x6634C1EC)
+I (RC522.h)(0x66355308)
 I (gpio.h)(0x6633B754)
 I (spi.h)(0x6633B754)
 I (pwm.h)(0x6634C130)
@@ -161,10 +161,10 @@ I (C:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Inc
 I (C:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include\rl_net_ds.h)(0x60A566F2)
 I (ADC.h)(0x6633C162)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E9F32)
-F (Web\Web.c)(0x6634D263)(--c99 -c --cpu Cortex-M4 -D__RTX -D__MICROLIB -g -O0 --apcs=interwork -I.\RTE\CMSIS-I.\RTE\Compiler-I.\RTE\Device\STM32F429ZITx-I.\RTE\Network-I.\RTE\_Debug-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Driver\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.3\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\debug\web.o --depend .\debug\web.d)
+F (Web\Web.c)(0x66356337)(--c99 -c --cpu Cortex-M4 -D__RTX -D__MICROLIB -g -O0 --apcs=interwork -I.\RTE\CMSIS-I.\RTE\Compiler-I.\RTE\Device\STM32F429ZITx-I.\RTE\Network-I.\RTE\_Debug-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Driver\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.3\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\debug\web.o --depend .\debug\web.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E9F32)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E9F32)
-F (.\Web\pg_header.inc)(0x663454CA)()
+F (.\Web\pg_header.inc)(0x66351D38)()
 F (.\Web\pg_footer.inc)(0x66342D20)()
 F (.\Web\ad.cgi)(0x6633B75A)()
 F (.\Web\ad.cgx)(0x6633B75A)()
@@ -183,7 +183,7 @@ F (.\Web\logo.gif)(0x6633B75A)()
 F (.\Web\pabb.gif)(0x6633B75A)()
 F (.\Web\rtc.cgi)(0x6633B75A)()
 F (.\Web\logoUPM.gif)(0x6627C170)()
-F (.\Web\index.htm)(0x66343B80)()
+F (.\Web\index.htm)(0x66356130)()
 F (.\Web\logo_keysecure.png)(0x6633E4F0)()
 F (.\Web\network.png)(0x6633E645)()
 F (.\Web\config.png)(0x6633EC24)()
@@ -192,9 +192,9 @@ F (.\Web\measureTest.png)(0x6633ED02)()
 F (.\Web\measureData.png)(0x6633EFD4)()
 F (.\Web\fondo.png)(0x6633F1C5)()
 F (.\Web\config.cgi)(0x6634559E)()
-F (.\Web\controlAccess.cgi)(0x66346791)()
+F (.\Web\controlAccess.cgi)(0x66353D93)()
 F (.\Web\measuresData.cgi)(0x6634676B)()
-F (.\Web\measuresTest.cgi)(0x6634677C)()
+F (.\Web\measuresTest.cgi)(0x66356336)()
 F (.\Web\llblue.jpg)(0x6633B75A)()
 F (.\Web\atras.png)(0x66342BAC)()
 F (.\Web\co2.png)(0x66344A26)()
@@ -202,6 +202,8 @@ F (.\Web\temp.png)(0x66344A00)()
 F (.\Web\humedad.png)(0x66344A0C)()
 F (.\Web\programador.png)(0x663462EE)()
 F (.\Web\uid.png)(0x6634639D)()
+F (.\Web\rtc.cgx)(0x66352F90)()
+F (.\Web\controlAccess.cgx)(0x66353F49)()
 F (.\Abstract.txt)(0x6633B754)()
 F (.\LCD.c)(0x6633B754)(--c99 -c --cpu Cortex-M4 -D__RTX -D__MICROLIB -g -O0 --apcs=interwork -I.\RTE\CMSIS-I.\RTE\Compiler-I.\RTE\Device\STM32F429ZITx-I.\RTE\Network-I.\RTE\_Debug-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Driver\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.3\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\debug\lcd_1.o --depend .\debug\lcd_1.d)
 I (LCD.h)(0x6633B754)
@@ -430,7 +432,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E9F32)
 I (C:\Keil_v5\ARM\ARMCC\include\time.h)(0x5E8E9F32)
 I (C:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include\rl_net.h)(0x5E95ADD0)
 I (C:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include\rl_net_ds.h)(0x60A566F2)
-F (.\RTC.c)(0x6633B754)(--c99 -c --cpu Cortex-M4 -D__RTX -D__MICROLIB -g -O0 --apcs=interwork -I.\RTE\CMSIS-I.\RTE\Compiler-I.\RTE\Device\STM32F429ZITx-I.\RTE\Network-I.\RTE\_Debug-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Driver\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.3\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\debug\rtc_1.o --depend .\debug\rtc_1.d)
+F (.\RTC.c)(0x6633B754)(--c99 -c --cpu Cortex-M4 -D__RTX -D__MICROLIB -g -O0 --apcs=interwork -I.\RTE\CMSIS-I.\RTE\Compiler-I.\RTE\Device\STM32F429ZITx-I.\RTE\Network-I.\RTE\_Debug-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Driver\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.3\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\debug\rtc_2.o --depend .\debug\rtc_2.d)
 I (RTC.h)(0x6633B754)
 I (C:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x5F6B34E6)
 I (.\RTE\Device\STM32F429ZITx\stm32f4xx_hal_conf.h)(0x6633B75A)
@@ -479,8 +481,8 @@ I (C:\Keil_v5\ARM\ARMCC\include\time.h)(0x5E8E9F32)
 I (C:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include\rl_net.h)(0x5E95ADD0)
 I (C:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include\rl_net_ds.h)(0x60A566F2)
 F (.\RTC.h)(0x6633B754)()
-F (.\RC522.c)(0x6634C2A0)(--c99 -c --cpu Cortex-M4 -D__RTX -D__MICROLIB -g -O0 --apcs=interwork -I.\RTE\CMSIS-I.\RTE\Compiler-I.\RTE\Device\STM32F429ZITx-I.\RTE\Network-I.\RTE\_Debug-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Driver\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.3\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\debug\rc522.o --depend .\debug\rc522.d)
-I (RC522.h)(0x6634C1EC)
+F (.\RC522.c)(0x6635570D)(--c99 -c --cpu Cortex-M4 -D__RTX -D__MICROLIB -g -O0 --apcs=interwork -I.\RTE\CMSIS-I.\RTE\Compiler-I.\RTE\Device\STM32F429ZITx-I.\RTE\Network-I.\RTE\_Debug-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Driver\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.3\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\debug\rc522.o --depend .\debug\rc522.d)
+I (RC522.h)(0x66355308)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E9F32)
 I (gpio.h)(0x6633B754)
 I (main.h)(0x6633B754)
@@ -529,7 +531,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E9F32)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E9F32)
 I (LCD.h)(0x6633B754)
 I (pwm.h)(0x6634C130)
-F (.\RC522.h)(0x6634C1EC)()
+F (.\RC522.h)(0x66355308)()
 F (.\spi.c)(0x6633B754)(--c99 -c --cpu Cortex-M4 -D__RTX -D__MICROLIB -g -O0 --apcs=interwork -I.\RTE\CMSIS-I.\RTE\Compiler-I.\RTE\Device\STM32F429ZITx-I.\RTE\Network-I.\RTE\_Debug-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Driver\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.3\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\debug\spi.o --depend .\debug\spi.d)
 I (spi.h)(0x6633B754)
 I (.\RTE\Device\STM32F429ZITx\RTE_Device.h)(0x6633B75A)
@@ -575,7 +577,7 @@ I (C:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM3
 I (C:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E9F32)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E9F32)
-I (RC522.h)(0x6634C1EC)
+I (RC522.h)(0x66355308)
 I (gpio.h)(0x6633B754)
 I (main.h)(0x6633B754)
 I (LCD.h)(0x6633B754)
@@ -1774,7 +1776,7 @@ I (C:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM3
 I (C:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x5F6B34E6)
 I (C:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x5F6B34E6)
 F (RTE\Device\STM32F429ZITx\RTE_Device.h)(0x6633B75A)()
-F (RTE\Device\STM32F429ZITx\startup_stm32f429xx.s)(0x6633B75A)(--cpu Cortex-M4 --pd "__RTX SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\CMSIS-I.\RTE\Compiler-I.\RTE\Device\STM32F429ZITx-I.\RTE\Network-I.\RTE\_Debug-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Driver\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.3\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc--pd "__UVISION_VERSION SETA 534" --pd "_RTE_ SETA 1" --pd "STM32F429xx SETA 1" --pd "_RTE_ SETA 1"--list .\debug\startup_stm32f429xx.lst --xref -o .\debug\startup_stm32f429xx.o --depend .\debug\startup_stm32f429xx.d)
+F (RTE\Device\STM32F429ZITx\startup_stm32f429xx.s)(0x66353934)(--cpu Cortex-M4 --pd "__RTX SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\CMSIS-I.\RTE\Compiler-I.\RTE\Device\STM32F429ZITx-I.\RTE\Network-I.\RTE\_Debug-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Driver\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.3\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc--pd "__UVISION_VERSION SETA 534" --pd "_RTE_ SETA 1" --pd "STM32F429xx SETA 1" --pd "_RTE_ SETA 1"--list .\debug\startup_stm32f429xx.lst --xref -o .\debug\startup_stm32f429xx.o --depend .\debug\startup_stm32f429xx.d)
 F (RTE\Device\STM32F429ZITx\stm32f4xx_hal_conf.h)(0x6633B75A)()
 F (RTE\Device\STM32F429ZITx\system_stm32f4xx.c)(0x6633B75A)(--c99 -c --cpu Cortex-M4 -D__RTX -D__MICROLIB -g -O0 --apcs=interwork -I.\RTE\CMSIS-I.\RTE\Compiler-I.\RTE\Device\STM32F429ZITx-I.\RTE\Network-I.\RTE\_Debug-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Driver\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include-IC:\Users\maria\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.3\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\Network\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\debug\system_stm32f4xx.o --depend .\debug\system_stm32f4xx.d)
 I (C:\Users\maria\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F6B3446)

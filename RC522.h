@@ -9,7 +9,8 @@
 #include "stm32f4xx_hal.h"
 #include <stdio.h>
 #include <stdbool.h>
-#include "string.h"
+#include <stdint.h>
+#include <string.h>
 #include "LCD.h"
 #include "pwm.h"
 

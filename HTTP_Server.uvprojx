@@ -598,6 +598,16 @@
               <FileType>9</FileType>
               <FilePath>.\Web\uid.png</FilePath>
             </File>
+            <File>
+              <FileName>rtc.cgx</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Web\rtc.cgx</FilePath>
+            </File>
+            <File>
+              <FileName>controlAccess.cgx</FileName>
+              <FileType>9</FileType>
+              <FilePath>.\Web\controlAccess.cgx</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
