@@ -48,3 +48,4 @@
 .\debug\rc522.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\debug\rc522.o: RC522.h
 .\debug\rc522.o: LCD.h
+.\debug\rc522.o: pwm.h

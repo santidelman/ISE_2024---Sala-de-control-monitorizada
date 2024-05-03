@@ -48,3 +48,4 @@
 .\debug\spi.o: main.h
 .\debug\spi.o: spi.h
 .\debug\spi.o: LCD.h
+.\debug\spi.o: pwm.h

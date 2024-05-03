@@ -81,6 +81,11 @@
   \return      Number of available LEDs
 */
 
+#define MBED_RGB_RED_PIN        GPIO_PIN_13
+#define MBED_RGB_GREEN_PIN      GPIO_PIN_12
+#define MBED_RGB_BLUE_PIN       GPIO_PIN_11
+#define MBED_RGB_PORT			    	GPIOD
+
 extern int32_t  LED_Initialize   (void);
 extern int32_t  LED_Uninitialize (void);
 extern int32_t  LED_On           (uint32_t num);

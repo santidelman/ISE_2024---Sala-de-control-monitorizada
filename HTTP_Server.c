@@ -18,6 +18,7 @@
 #include "SNTP.h"
 #include "BUTTON.h"
 #include "RC522.h"
+#include "pwm.h"
 
 // Main stack size must be multiple of 8 Bytes
 #define APP_MAIN_STK_SZ (1024U)
@@ -46,6 +47,7 @@ bool LEDrun;
 bool LCDrun = false;
 char lcd_text[2][20+1] = { "LCD line 1",
                            "LCD line 2" };
+uint8_t rgb = 0;
 
 /* Thread IDs */
 osThreadId_t TID_Display;
@@ -94,22 +96,10 @@ void netDHCP_Notify (uint32_t if_num, uint8_t option, const uint8_t *val, uint32
  *---------------------------------------------------------------------------*/
 static __NO_RETURN void Display (void *arg)
 {
-	static char buf[24];
   while(1){
-		/* PRACTICA 1*/
-		if(LCDrun){
-			osDelay(1000);
-			LCD_clean();
-			sprintf (buf, "%-20s", lcd_text[0]);
-			LCD_WriteSentence(buf,1);
-			sprintf (buf, "%-20s", lcd_text[1]);
-			LCD_WriteSentence(buf,2);
-		} else {
-		/* PRACTICA 2*/
-			osDelay(1000);
-//			LCD_clean();
-//			RTC_Show_TimeDate();
-		}
+		LCD_clean();
+		RTC_Show_TimeDate();
+		osDelay(1000);
   }
 }
 
@@ -117,48 +107,10 @@ static __NO_RETURN void Display (void *arg)
   Thread 'BlinkLed': Blink the LEDs on an eval board
  *---------------------------------------------------------------------------*/
 static __NO_RETURN void BlinkLed (void *arg) {
-  const uint8_t led_val[16] = { 0x48,0x88,0x84,0x44,0x42,0x22,0x21,0x11,
-                                0x12,0x0A,0x0C,0x14,0x18,0x28,0x30,0x50 };
   (void)arg;
 																
-  uint32_t cnt = 0U;
-	int ticks_5s, ticks_2s = 0;
-	GPIO_PinState on_off;
-                                
-  LEDrun = true;
-																
   while(1) {
-    /* PRACTICA 1*/
-		if (LEDrun == true) {
-      LED_SetOut (led_val[cnt]);
-      if (++cnt >= sizeof(led_val)) {
-        cnt = 0U;
-      }
-    }			
-    /* PRACTICA 2*/
-		if(alarm == true){
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0,on_off);
-			ticks_5s++;
-			if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_0) == GPIO_PIN_SET)	on_off = GPIO_PIN_RESET;
-			else 																										on_off = GPIO_PIN_SET;
-			if(ticks_5s == 50){
-				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
-				ticks_5s = 0;
-				alarm = false; 
-			}
-		}
-		if(sntp_hour){
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14,on_off);
-			ticks_2s++;
-			if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_14) == GPIO_PIN_SET)	on_off = GPIO_PIN_RESET;
-			else 																										on_off = GPIO_PIN_SET;
-			if(ticks_2s == 20){
-				HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
-				ticks_2s = 0;
-				sntp_hour = false; 
-			}
-		}
-    osDelay(100);		
+		if(rgb == 0)			HAL_GPIO_WritePin(MBED_RGB_PORT, MBED_RGB_BLUE_PIN, GPIO_PIN_RESET);
   }
 }
 
@@ -179,13 +131,16 @@ __NO_RETURN void app_main (void *arg) {
 //	Init_ThreadPulsacion();
 	Init_Thread_RC522();
 	RC522_Timer_Init();
+	
+	Init_Zumbador();
+	Init_ThreadPWM();
 
   netInitialize ();
 	
-	osDelay(5000);
-//	RTC_Init();
-//	Get_Time_SNTP();
-//	RTC_Timer_Init();
+	osDelay(4000);
+	Get_Time_SNTP();
+	RTC_Init();
+	RTC_Timer_Init();
 
   TID_Led     = osThreadNew (BlinkLed, NULL, NULL);
   TID_Display = osThreadNew (Display,  NULL, NULL);

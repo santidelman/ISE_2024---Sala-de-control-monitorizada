@@ -75,6 +75,18 @@ int32_t LED_Initialize (void) {
 		GPIO_InitStruct.Pin= LED_PIN[i].pin;
 		HAL_GPIO_Init(LED_PIN[i].port, &GPIO_InitStruct);
 	}
+	
+	/* **** CONFIGURACION LEDS RGB TARJETA MBED *** */
+  __HAL_RCC_GPIOD_CLK_ENABLE(); // habilitacion del reloj del puerto D
+ 
+	GPIO_InitStruct.Pin = (MBED_RGB_RED_PIN | MBED_RGB_GREEN_PIN | MBED_RGB_BLUE_PIN);
+ 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Pull = GPIO_PULLUP;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+  HAL_GPIO_Init(MBED_RGB_PORT, &GPIO_InitStruct);
+	
+	HAL_GPIO_WritePin(MBED_RGB_PORT, MBED_RGB_RED_PIN | MBED_RGB_GREEN_PIN | MBED_RGB_BLUE_PIN, GPIO_PIN_SET);
+	
   return 0;
 }
 

@@ -7,7 +7,7 @@ GPIO_InitTypeDef GPIO_InitStruct_Button;
 /* Private variable ----------------------------------------------------------*/
 osThreadId_t tid_ThreadPulsacion;  
 
-bool hour_summer = false;
+//bool hour_summer = false;
 
 void GPIO_Init_ButtonBlue(void)
 {
@@ -44,8 +44,8 @@ void ThreadPulsacion(void *argument)
 {
 	while(1){
 		osThreadFlagsWait(0x01, osFlagsWaitAny, osWaitForever);
-		if (HAL_GPIO_ReadPin(GPIOC,BUTTON_BLUE) == GPIO_PIN_SET) 	hour_summer = true;
-		else 																											hour_summer = false;
-		Get_Time_SNTP();
+//		if (HAL_GPIO_ReadPin(GPIOC,BUTTON_BLUE) == GPIO_PIN_SET) 	hour_summer = true;
+//		else 																											hour_summer = false;
+//		Get_Time_SNTP();
 	}
 }

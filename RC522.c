@@ -10,9 +10,11 @@
 
 uint8_t CardUID[5];  // almacena el buffer del codigo de rfid
 
-//SPI init
+// SPI init
 extern ARM_DRIVER_SPI Driver_SPI3;
 static ARM_DRIVER_SPI* SPI3drv = &Driver_SPI3;
+// Zumbador
+extern osThreadId_t tid_ThreadPWM;
 
 osTimerId_t tim_RC522;
 static uint32_t exec;
@@ -76,7 +78,7 @@ static __NO_RETURN void Thread_RC522 (void *arg) {
 		while(1) {
 			osThreadFlagsWait(RC522_readUID, osFlagsWaitAny, osWaitForever);
 			if(TM_MFRC522_Check(CardUID) == MI_OK){
-				
+				osThreadFlagsSet(tid_ThreadPWM, senalPWM);
 				LCD_clean();
 				sprintf(buffer, "%02X %02X %02X %02X %02X", CardUID[0], CardUID[1], CardUID[2], CardUID[3], CardUID[4]);
 				LCD_WriteSentence(buffer,1);

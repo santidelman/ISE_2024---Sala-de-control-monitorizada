@@ -57,3 +57,4 @@
 .\debug\http_server.o: gpio.h
 .\debug\http_server.o: spi.h
 .\debug\http_server.o: RC522.h
+.\debug\http_server.o: pwm.h

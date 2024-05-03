@@ -12,6 +12,7 @@
 ".\debug\rc522.o"
 ".\debug\spi.o"
 ".\debug\gpio.o"
+".\debug\pwm.o"
 ".\debug\irq_armv7m.o"
 ".\debug\rtx_delay.o"
 ".\debug\rtx_evflags.o"

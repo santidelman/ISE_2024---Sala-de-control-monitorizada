@@ -11,6 +11,7 @@
 #include <stdbool.h>
 #include "string.h"
 #include "LCD.h"
+#include "pwm.h"
 
 typedef unsigned char uchar;
 #define MAX_CLIENTS_SIZE 10

@@ -9,7 +9,7 @@ extern RTC_HandleTypeDef RtcHandle;
 extern RTC_DateTypeDef sdatestructureget;
 extern RTC_TimeTypeDef stimestructureget; 
 extern bool LCDrun;
-extern bool hour_summer;
+//extern bool hour_summer = false;
 
 uint32_t sec = 0;
 bool sntp_hour = false;
@@ -18,30 +18,30 @@ const NET_ADDR4 ntp_server = { NET_ADDR_IP4, 0, 150, 214, 94, 10 };
 static void time_callback (uint32_t seconds, uint32_t seconds_fraction);
 osThreadId_t tid_ThreadSNTP;
 
-//osTimerId_t tim_RTC_SNTP;
-//static uint32_t exec;
+osTimerId_t tim_RTC_SNTP;
+static uint32_t exec;
 
-//static void Timer_sync_RTC_SNTP(void const *arg)
-//{
-//  Get_Time_SNTP();
-//	sntp_hour = true;
-//	LCDrun = false;
-//}
+static void Timer_sync_RTC_SNTP(void const *arg)
+{
+  Get_Time_SNTP();
+	sntp_hour = true;
+	LCDrun = false;
+}
 
-//int RTC_Timer_Init(void)
-//{
-//	osStatus_t status;                            // function return status
-//  // Create periodic timer
-//  exec = 2U;
-//  tim_RTC_SNTP = osTimerNew((osTimerFunc_t)&Timer_sync_RTC_SNTP, osTimerPeriodic, &exec, NULL);
-//  if (tim_RTC_SNTP != NULL) {  // Periodic timer created
-//    status = osTimerStart(tim_RTC_SNTP, 180000U);            
-//    if (status != osOK) {
-//      return -1;
-//    }
-//	}
-//	return 0;
-//}
+int RTC_Timer_Init(void)
+{
+	osStatus_t status;                            // function return status
+  // Create periodic timer
+  exec = 2U;
+  tim_RTC_SNTP = osTimerNew((osTimerFunc_t)&Timer_sync_RTC_SNTP, osTimerPeriodic, &exec, NULL);
+  if (tim_RTC_SNTP != NULL) {  // Periodic timer created
+    status = osTimerStart(tim_RTC_SNTP, 180000U);            
+    if (status != osOK) {
+      return -1;
+    }
+	}
+	return 0;
+}
 
 void Get_Time_SNTP (void) 
 {
@@ -59,8 +59,7 @@ static void time_callback (uint32_t seconds, uint32_t seconds_fraction)
     LCD_WriteSentence("Server SNTP ERROR",2);
   }
   else {
-		if(!hour_summer)	sec = seconds + 3600;
-		else 	sec = seconds + 7200;
+		sec = seconds + 7200;								// Esto será siempre para cuando estamos en invierno
     LCD_WriteSentence("Server SNTP",2);
     SNTP = *localtime(&sec);
     RTC_Show_SNTP_TimeDate(); 
