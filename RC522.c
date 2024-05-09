@@ -80,7 +80,8 @@ int Init_Thread_RC522 (void)
 static __NO_RETURN void Thread_RC522 (void *arg) {
 		(void)arg;
 		int tag_count = 0;
-		RC522_Initialize();
+//		RC522_Initialize();
+		TM_MFRC522_Init();
 	
 		while(1) {
 			osThreadFlagsWait(RC522_readUID, osFlagsWaitAny, osWaitForever);
@@ -118,11 +119,11 @@ static __NO_RETURN void Thread_RC522 (void *arg) {
 *			- Configuracion del SPI y de los puertos GPIO. 
 *			- Inicializa el modulo RC522
 */
-void RC522_Initialize(void){
-	RC522_GPIO_Init();
-	RC522_SPI3_Init();
-	TM_MFRC522_Init();
-}
+//void RC522_Initialize(void){
+//	RC522_GPIO_Init();
+//	SPI3_Init();
+//	TM_MFRC522_Init();
+//}
 
 /**
 *	Inicializa el módulo MFRC522.
@@ -196,7 +197,7 @@ static void TM_MFRC522_WriteRegister(uint8_t addr, uint8_t val) {
 	static uint8_t tx_data[2];
 	
 	//CS low
-	HAL_GPIO_WritePin(RC522_CS_PORT, RC522_CS_PIN, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(CS_RC522_PORT, CS_RC522_PIN, GPIO_PIN_RESET);
 	
 	//send address and data
 	tx_data[0] = (addr << 1) & 0x7E;
@@ -206,7 +207,7 @@ static void TM_MFRC522_WriteRegister(uint8_t addr, uint8_t val) {
 	osThreadFlagsWait(SPI3_transfer_complete, osFlagsWaitAny, osWaitForever);
 	
 	//CS high
-	HAL_GPIO_WritePin(RC522_CS_PORT, RC522_CS_PIN, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(CS_RC522_PORT, CS_RC522_PIN, GPIO_PIN_SET);
 }
 
 /**
@@ -218,7 +219,7 @@ static uint8_t TM_MFRC522_ReadRegister(uint8_t addr) {
 	static uint8_t rx_data;
 	
 	//CS low
-	HAL_GPIO_WritePin(RC522_CS_PORT, RC522_CS_PIN, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(CS_RC522_PORT, CS_RC522_PIN, GPIO_PIN_RESET);
 	
 	//send address and data
 	uint8_t tx_data = ((addr << 1) & 0x7E) | 0x80; 	
@@ -229,7 +230,7 @@ static uint8_t TM_MFRC522_ReadRegister(uint8_t addr) {
 	osThreadFlagsWait(SPI3_transfer_complete, osFlagsWaitAny, osWaitForever);
 	
 	//CS high
-	HAL_GPIO_WritePin(RC522_CS_PORT, RC522_CS_PIN, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(CS_RC522_PORT, CS_RC522_PIN, GPIO_PIN_SET);
 	return rx_data;	
 }
 

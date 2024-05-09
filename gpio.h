@@ -25,15 +25,31 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
+/* Defines -------------------------------------------------------------------*/
 /**SPI3 GPIO Configuration
-*    PA15     ------> SPI3_NSS o SPI3_CS
-*    PF12    ------> SPI3_RESET
+*    PB4     ------> SPI3_MISO
+*    PC12    ------> SPI3_MOSI
+*    PB3     ------> SPI3_SCK
 */
-#define RC522_CS_PIN         	GPIO_PIN_15
-#define RC522_CS_PORT     		GPIOA 
-#define RC522_RST_PIN      		GPIO_PIN_12
-#define RC522_RST_PORT     		GPIOF 
+#define SCK_PIN         	GPIO_PIN_3
+#define SCK_PORT    			GPIOB
+#define MISO_PIN      		GPIO_PIN_4
+#define MISO_PORT   			GPIOB
+#define MOSI_PIN         	GPIO_PIN_12
+#define MOSI_PORT        	GPIOC 
 
-void RC522_GPIO_Init(void);
+/**Aditional SPI GPIO Configuration
+*    PF12    ------> RST_RC522
+*    PA15    ------> nCS_RC522
+*    PG0     ------> nCS_W25Q32
+*/
+#define RST_RC522_PIN     GPIO_PIN_12
+#define RST_RC522_PORT    GPIOF
+#define CS_RC522_PIN      GPIO_PIN_15
+#define CS_RC522_PORT     GPIOA
+#define CS_W25Q32_PIN     GPIO_PIN_0
+#define CS_W25Q32_PORT    GPIOG
+
+void GPIO_SPI_Init(void);
 
 #endif

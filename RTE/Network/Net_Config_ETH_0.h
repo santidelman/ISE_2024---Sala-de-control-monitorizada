@@ -40,7 +40,7 @@
 //     <s.15>IP Address
 //     <i>Static IPv4 Address in text representation
 //     <i>Default: "192.168.0.100"
-#define ETH0_IP4_ADDR           "192.168.0.160"
+#define ETH0_IP4_ADDR           "192.168.1.160"
 
 //     <s.15>Subnet mask
 //     <i>Local Subnet mask in text representation
@@ -50,7 +50,7 @@
 //     <s.15>Default Gateway
 //     <i>IP Address of Default Gateway in text representation
 //     <i>Default: "192.168.0.254"
-#define ETH0_IP4_GATEWAY        "192.168.0.1"
+#define ETH0_IP4_GATEWAY        "192.168.1.1"
 
 //     <s.15>Primary DNS Server
 //     <i>IP Address of Primary DNS Server in text representation

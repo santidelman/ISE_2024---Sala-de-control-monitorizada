@@ -17,5 +17,7 @@
 void ADC1_pins_F429ZI_config(void);  //Configuracion de los pines
 int ADC_Init_Single_Conversion(ADC_HandleTypeDef *, ADC_TypeDef  *);  //Configuracion del ADC
 uint32_t ADC_getVoltage(ADC_HandleTypeDef * , uint32_t );  //lectura del voltaje convertido a un float
+float ratio_to_ppm(float ratio);
+float calculate_CO_ppm(uint32_t adc_value);
 
 #endif /* __ADC_H */

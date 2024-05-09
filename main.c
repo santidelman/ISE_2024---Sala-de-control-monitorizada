@@ -39,8 +39,6 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "RTC.h"
-#include "ADC.h"
 
 #ifdef RTE_CMSIS_RTOS2_RTX5
 /**
@@ -110,8 +108,6 @@ int main(void)
   /* Add your application code here
      */
 	
-	ADC1_pins_F429ZI_config();
-  ADC_Init_Single_Conversion(&hadc, ADC1);
 
 #ifdef RTE_CMSIS_RTOS2
   /* Initialize CMSIS-RTOS2 */

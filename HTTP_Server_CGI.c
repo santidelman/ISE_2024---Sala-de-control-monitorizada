@@ -346,14 +346,14 @@ uint32_t netCGI_Script (const char *env, char *buf, uint32_t buflen, uint32_t *p
     case 'g':
       // AD Input from 'ad.cgi'
       switch (env[2]) {
-        case '1':
+        case '1': //
           adv = AD_in (13);
           len = (uint32_t)sprintf (buf, &env[4], adv);
           break;
-        case '2':
+        case '2': //barra
           len = (uint32_t)sprintf (buf, &env[4], (double)((float)adv*3.3f)/4096);
           break;
-        case '3':
+        case '3': //valor
           adv = (adv * 100) / 4096;
           len = (uint32_t)sprintf (buf, &env[4], adv);
           break;
@@ -365,6 +365,7 @@ uint32_t netCGI_Script (const char *env, char *buf, uint32_t buflen, uint32_t *p
       adv = AD_in (13);
       len = (uint32_t)sprintf (buf, &env[1], adv);
       break;
+
 
     case 'w':
       // 'rfid.cgi'

@@ -19,6 +19,8 @@
 #include "BUTTON.h"
 #include "RC522.h"
 #include "pwm.h"
+#include "W25Q32.h"
+#include "bme680.h"
 
 // Main stack size must be multiple of 8 Bytes
 #define APP_MAIN_STK_SZ (1024U)
@@ -48,6 +50,8 @@ bool LCDrun = false;
 char lcd_text[2][20+1] = { "LCD line 1",
                            "LCD line 2" };
 uint8_t rgb = 0;
+int32_t adc_value = 0;
+float ppm = 0;
 
 /* Thread IDs */
 osThreadId_t TID_Display;
@@ -74,8 +78,10 @@ __NO_RETURN void app_main (void *arg);
 //}
 
 uint32_t AD_in (uint32_t ch) {//FUNCION MODIFICADA PARA USAR EN NUESTRA PLACA
-	int32_t value=ADC_getVoltage(&hadc , ch);//get values from channel 10->ADC123_IN10
-  return ((uint16_t)value);
+  
+  adc_value=ADC_getVoltage(&hadc , ch);//get values from channel 10->ADC123_IN10
+	ppm = calculate_CO_ppm(adc_value);
+  return ((uint16_t)adc_value);
 }
 
 /* IP address change notification */
@@ -125,22 +131,37 @@ __NO_RETURN void app_main (void *arg) {
 	LCD_init();
 	LCD_clean();
 	
+	GPIO_SPI_Init();
+	SPI3_Init();
+	
+	ADC1_pins_F429ZI_config();
+  ADC_Init_Single_Conversion(&hadc, ADC1);
+	
 	LED_Initialize();
 //	ADC_Initialize();
 //	GPIO_Init_ButtonBlue();
 //	Init_ThreadPulsacion();
+	
 	Init_Thread_RC522();
 	RC522_Timer_Init();
-	
 	Init_Zumbador();
 	Init_ThreadPWM();
+	
+	Init_Th_BME680();
 
+
+	
+	
+
+	Init_FLASH();
+	
   netInitialize ();
 	
 	osDelay(4000);
 	Get_Time_SNTP();
 	RTC_Init();
 	RTC_Timer_Init();
+
 
   TID_Led     = osThreadNew (BlinkLed, NULL, NULL);
   TID_Display = osThreadNew (Display,  NULL, NULL);

@@ -46,7 +46,7 @@ c g 3 <td><table id="ad_table" style="width: %d%%" border="0" cellpadding="0" ce
 t <tr><td bgcolor="#0000FF">&nbsp;</td></tr></table></td></tr></table></td></tr>
 t </font></table>
 t <p align=center>
-t <input type=button value="Refresh" onclick="updateMultiple(formUpdate,plotADGraph)">
+t <input type=button value="Refresh" onclick="updateMultiple(c,plotADGraph)">
 t Periodic:<input type="checkbox" id="adChkBox" onclick="periodicUpdateAd()">
 t </p></form>
 i pg_footer.inc

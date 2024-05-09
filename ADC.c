@@ -1,5 +1,5 @@
-#include "ADC.h"
-
+#include "adc.h"
+#include <math.h>
 
 /**
   * @brief config the use of analog inputs ADC123_IN10 and ADC123_IN13 and enable ADC1 clock
@@ -81,4 +81,24 @@ void ADC1_pins_F429ZI_config(){
 			return raw;
 	}
 
+
+	
+	
+	
+#define RL_VALUE 10.0f // Valor de la resistencia de carga en kiloohms
+#define VC_VALUE 5.0f  // Voltaje de alimentaci?n del circuito del sensor
+	
+	float ratio, VRL, Rs, Ro, ppm_value, ppm_prueba;
+
+float calculate_CO_ppm(uint32_t adc_value) {
+
+    VRL = (adc_value * 4.8) / RESOLUTION_12B; 
+    Rs = ((VC_VALUE / VRL) - 1) * RL_VALUE;   
+    Ro = 70.0f; // valor de Ro en aire limpio, debe calibrarse previamente
+
+    ratio = Rs / Ro;
+    ppm_value = pow(10, -log10(ratio));
+
+    return ppm_value;
+}
 

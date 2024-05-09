@@ -24,25 +24,15 @@
 #include "RTE_Device.h"
 #include "Driver_SPI.h"
 #include "stm32f4xx_hal.h"
-#include "cmsis_os2.h" 
+#include "cmsis_os2.h" s
 #include <stdio.h>
 #include <stdbool.h>
 #include "string.h"
 #include "RC522.h"
 #include "gpio.h"
 
-/**SPI3 GPIO Configuration
-*    PB4     ------> SPI3_MISO
-*    PC12    ------> SPI3_MOSI
-*    PB3     ------> SPI3_SCK
-*/
-#define RC522_SCK_PIN         	GPIO_PIN_3
-#define RC522_MISO_PIN      		GPIO_PIN_4
-#define RC522_SKC_MISO_PORT    	GPIOB
-#define RC522_MOSI_PIN         	GPIO_PIN_12
-#define RC522_MOSI_PORT        	GPIOC 
 
-void RC522_SPI3_Init(void);
+void SPI3_Init(void);
 static void SPI_callback(uint32_t event);
 
 #endif

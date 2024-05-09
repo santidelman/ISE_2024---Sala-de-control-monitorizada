@@ -19,42 +19,53 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "gpio.h"
+#include "spi.h"
 
-/**
- * Inicializa los pines GPIO necesarios para el funcionamiento del módulo RC522.
- */
-void RC522_GPIO_Init(void)
-{
-  static GPIO_InitTypeDef GPIO_InitStruct_RC522;
-	
-  __HAL_RCC_GPIOA_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
-  __HAL_RCC_GPIOF_CLK_ENABLE();
+void GPIO_SPI_Init(void){
   
-	
-  __HAL_RCC_GPIOA_CLK_ENABLE();
-  GPIO_InitStruct_RC522.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct_RC522.Pull = GPIO_PULLUP;
-  GPIO_InitStruct_RC522.Speed = GPIO_SPEED_FREQ_HIGH;
-  GPIO_InitStruct_RC522.Pin = GPIO_PIN_15;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct_RC522);
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_15, GPIO_PIN_SET);
-  
-  __HAL_RCC_GPIOB_CLK_ENABLE();
-  GPIO_InitStruct_RC522.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct_RC522.Pull = GPIO_PULLUP;
-  GPIO_InitStruct_RC522.Speed = GPIO_SPEED_FREQ_HIGH;
-  GPIO_InitStruct_RC522.Pin = GPIO_PIN_4;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct_RC522);
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, GPIO_PIN_SET);
+  static GPIO_InitTypeDef GPIO_InitStruct_SPI;
 	
   __HAL_RCC_GPIOF_CLK_ENABLE();
-  GPIO_InitStruct_RC522.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct_RC522.Pull = GPIO_PULLUP;
-  GPIO_InitStruct_RC522.Speed = GPIO_SPEED_FREQ_HIGH;
-  GPIO_InitStruct_RC522.Pin = GPIO_PIN_12;
-  HAL_GPIO_Init(GPIOF, &GPIO_InitStruct_RC522);
-  HAL_GPIO_WritePin(GPIOF, GPIO_PIN_12, GPIO_PIN_SET);
-
-
+  GPIO_InitStruct_SPI.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct_SPI.Pull = GPIO_PULLUP;
+  GPIO_InitStruct_SPI.Speed = GPIO_SPEED_FREQ_HIGH;
+  GPIO_InitStruct_SPI.Pin = RST_RC522_PIN;
+  HAL_GPIO_Init(RST_RC522_PORT, &GPIO_InitStruct_SPI);
+  HAL_GPIO_WritePin(RST_RC522_PORT, RST_RC522_PIN, GPIO_PIN_SET);
+	
+	/*nCS RFID*/    //PA15
+	__HAL_RCC_GPIOA_CLK_ENABLE();
+  GPIO_InitStruct_SPI.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct_SPI.Pull = GPIO_PULLUP;
+  GPIO_InitStruct_SPI.Speed = GPIO_SPEED_FREQ_HIGH;
+  GPIO_InitStruct_SPI.Pin = CS_RC522_PIN;
+  HAL_GPIO_Init(CS_RC522_PORT, &GPIO_InitStruct_SPI);
+  HAL_GPIO_WritePin(CS_RC522_PORT, CS_RC522_PIN, GPIO_PIN_SET);
+	
+  /*nCS FLASH*/    //PG0
+  __HAL_RCC_GPIOG_CLK_ENABLE();
+  GPIO_InitStruct_SPI.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct_SPI.Pull = GPIO_PULLUP;
+      GPIO_InitStruct_SPI.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+  GPIO_InitStruct_SPI.Pin = CS_W25Q32_PIN;
+  HAL_GPIO_Init(CS_W25Q32_PORT, &GPIO_InitStruct_SPI);
+  HAL_GPIO_WritePin(CS_W25Q32_PORT, CS_W25Q32_PIN, GPIO_PIN_SET);
+  
+  /*MOSI*/    //PC12
+  __HAL_RCC_GPIOF_CLK_ENABLE();
+  GPIO_InitStruct_SPI.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct_SPI.Pull = GPIO_PULLUP;
+  GPIO_InitStruct_SPI.Speed = GPIO_SPEED_FREQ_HIGH;
+  GPIO_InitStruct_SPI.Pin = MOSI_PIN;
+  HAL_GPIO_Init(MOSI_PORT, &GPIO_InitStruct_SPI);
+  HAL_GPIO_WritePin(MOSI_PORT, MOSI_PIN, GPIO_PIN_SET);
+  
+  /*MISO*/   //SPI_MISO -- SPI_B_MISO  PB4
+  __HAL_RCC_GPIOB_CLK_ENABLE();
+  GPIO_InitStruct_SPI.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct_SPI.Pull = GPIO_PULLUP;
+  GPIO_InitStruct_SPI.Speed = GPIO_SPEED_FREQ_HIGH;
+  GPIO_InitStruct_SPI.Pin = MISO_PIN;
+  HAL_GPIO_Init(MISO_PORT, &GPIO_InitStruct_SPI);
+  HAL_GPIO_WritePin(MISO_PORT, MISO_PIN, GPIO_PIN_SET);
 }

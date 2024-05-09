@@ -29,15 +29,15 @@ ARM_DRIVER_SPI* SPI3drv = &Driver_SPI3;
  * Inicializa la interfaz SPI3 para el módulo RC522.
  * Configura los parámetros de la interfaz SPI y controla el pin de reinicio (RST).
  */
-void RC522_SPI3_Init(void)
+void SPI3_Init(void)
 {
 	SPI3drv -> Initialize(SPI_callback);
 	SPI3drv -> PowerControl(ARM_POWER_FULL);
 	SPI3drv -> Control(ARM_SPI_MODE_MASTER | ARM_SPI_CPOL0_CPHA0 | ARM_SPI_MSB_LSB | ARM_SPI_DATA_BITS(8), 1000000);
 
-	HAL_GPIO_WritePin(RC522_RST_PORT, RC522_RST_PIN, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(RST_RC522_PORT, RST_RC522_PIN, GPIO_PIN_RESET);
   osDelay(1);
-  HAL_GPIO_WritePin(RC522_RST_PORT, RC522_RST_PIN, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(RST_RC522_PORT, RST_RC522_PIN, GPIO_PIN_SET);
   osDelay(1000);
 }
 
